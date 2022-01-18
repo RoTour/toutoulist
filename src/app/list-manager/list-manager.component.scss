@@ -4,6 +4,10 @@
   grid-gap: 2rem;
   margin-right: 2rem;
   height: fit-content;
+  .done {
+    text-decoration: white line-through;
+    opacity: .4;
+  }
 }
 
 .manager-container {

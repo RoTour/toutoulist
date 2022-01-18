@@ -54,4 +54,16 @@ export class ListManagerComponent implements OnInit {
   reset(): void {
     this.selected = undefined;
   }
+
+  toggleComplete(creationDate: Date): void {
+    this.data.map((it) => {
+      if (it.creationDate === creationDate) {
+        it.completed = !it.completed
+      }
+      return it;
+    })
+    this.data.sort((it) => {
+      return it.completed ? 1 : -1
+    })
+  }
 }

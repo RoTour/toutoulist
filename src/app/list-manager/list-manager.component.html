@@ -1,7 +1,13 @@
 <div class="manager-container">
   <div class="toutou-container">
-    <div *ngFor="let toutou of data" (click)="select(toutou.creationDate)" class="card border-info mb-3" style="max-width: 20rem;">
-      <div class="card-header">Toutou to to</div>
+    <div *ngFor="let toutou of data"
+         (click)="select(toutou.creationDate)"
+         [ngClass]="toutou.completed ? 'done' : ''"
+         class="card border-info mb-3" style="max-width: 20rem;">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <div>Toutou to to</div>
+        <button (click)="toggleComplete(toutou.creationDate)" class="btn btn-outline-success">✅</button>
+      </div>
       <div class="card-body">
         <h4 class="card-title">{{toutou.title}}</h4>
         <p class="card-text">{{toutou.description}}</p>

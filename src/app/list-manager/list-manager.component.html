@@ -1,0 +1,15 @@
+<div class="manager-container">
+  <div class="toutou-container">
+    <div *ngFor="let toutou of data" (click)="select(toutou.creationDate)" class="card border-info mb-3" style="max-width: 20rem;">
+      <div class="card-header">Toutou to to</div>
+      <div class="card-body">
+        <h4 class="card-title">{{toutou.title}}</h4>
+        <p class="card-text">{{toutou.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-container">
+    <ro-form (updated)="updateToutous($event)" [selected]="selected" (reset)="reset()"></ro-form>
+  </div>
+
+</div>

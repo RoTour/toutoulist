@@ -1,0 +1,20 @@
+<div class="card border-info mb-3" style="max-width: 20rem;">
+  <div class="card-body">
+    <div class="card-title d-flex justify-content-between">
+      <h4>Add a Toutou</h4>
+      <button *ngIf="selected" (click)="onReset()" class="btn btn-info">X</button>
+    </div>
+    <div class="form-group">
+      <label class="col-form-label col-form-label mt-4" for="inputTitle">Title</label>
+      <input [(ngModel)]="title" (ngModelChange)="validator()" class="form-control" type="text" placeholder="Daniel" id="inputTitle" data-dashlane-rid="dae92f5db42602dd" data-form-type="other">
+    </div>
+    <div class="form-group">
+      <label class="col-form-label col-form-label mt-4" for="inputDescription">Description</label>
+      <textarea [(ngModel)]="desc" (ngModelChange)="validator()" rows="6" class="form-control" type="text" placeholder="Brosser avant vendredi 14" id="inputDescription" data-dashlane-rid="dae92f5db42602dd" data-form-type="other"></textarea>
+    </div>
+    <div class="form-group buttons">
+      <button (click)="submit()" [disabled]="!inputsAreValid" type="button" class="btn btn-primary mt-4">Set</button>
+      <button (click)="delete()" *ngIf="selected" [disabled]="!inputsAreValid" type="button" class="btn btn-danger mt-4 ms-auto">Delete</button>
+    </div>
+  </div>
+</div>

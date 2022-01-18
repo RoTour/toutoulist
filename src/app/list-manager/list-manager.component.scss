@@ -1,0 +1,13 @@
+.toutou-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-right: 2rem;
+  height: fit-content;
+}
+
+.manager-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 2rem;
+}

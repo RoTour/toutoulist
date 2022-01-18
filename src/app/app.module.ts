@@ -4,10 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToutouComponent } from './list-manager/toutou/toutou.component';
+import { ListManagerComponent } from './list-manager/list-manager.component';
+import { ButtonComponent } from './common/button/button.component';
+import { FormComponent } from './list-manager/form/form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToutouComponent,
+    ListManagerComponent,
+    ButtonComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
